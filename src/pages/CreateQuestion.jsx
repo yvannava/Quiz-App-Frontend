@@ -13,7 +13,7 @@ const CreateQuestion = ()=>{
     const[modal,showModal] = useState(false);
     const [statement,setStatement] = useState();
     const[questions,setQuestions]= useState([]);
-    const url = `http://localhost:8080/App/v1/Quiz/Topic/Question`;
+    const url = `http://localhost:8080/App/v1/Quiz/Topic/${topic.id}/Question`;
     const resetFields = ()=>{
      setAnswer("");
      setChoices([""]);
@@ -32,19 +32,13 @@ const CreateQuestion = ()=>{
     const handlePostRequest = async (e)=>{
       e.preventDefault();
       const formdata = {
-        questions:{
         text: statement,
         answer: answer,
-        choices: choices,
-        topic : {
-          id: topic.id,
-          topic : topic.topic,
-        }
-      }
+        choices: choices
       };
 
 
-      PostRequest(formdata, url);
+       PostRequest(formdata, url);
       
       console.log("data being sent: " + JSON.stringify(formdata));
       showModal(<ConfirmModal word={statement.toUpperCase()}/>)
