@@ -1,0 +1,194 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homefont{
+    color: teal;
+    text-shadow: -2px 5px 9px black;
+    font-family: 'Alfa Slab One', serif;
+}
+.dash-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* background: url('/src/assets/images/jon-tyson-hhq1Lxtuwd8-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover; */
+    background: rgb(36, 37, 38);
+    background: linear-gradient(180deg, rgb(40, 40, 41) 0%, rgb(1, 14, 22) 100%); 
+}
+.dash-card{
+    width: 20vw;
+    height: 45vh;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(0, 0, 0, 0.532);
+    box-shadow: -5px 3px 10px 2px rgba(1, 1, 1, 0.471);
+}
+
+.dash-card-icon{ 
+    position: relative;
+    top: 3vh;
+    align-self: center;
+    border-radius: 50px 50px 0 0 ;
+
+}
+
+.dash-list-icon{
+    width: 150px !important;
+    height: 150px !important;
+    color: rgba(255, 255, 255, 0.646);
+}
+.dash-list-icon:hover{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* color: rgb(7, 55, 83); */
+    color: teal;
+    transform: scale(1.1);
+}
+.topic-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    top: 25dvh;
+    left: 35dvw;
+}
+.all-topic-list{
+    width: 30vw;
+    max-height: 20vh;
+    color: white;
+    font-size: 1.15rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 0 0 5px 5px;
+    backdrop-filter: blur(5px);
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.378);
+    border-top: none;
+   
+}
+.all-topic-list li{
+    width: 30vw;
+    outline: 1px solid rgba(255, 255, 255, 0.704);
+    list-style: none;
+    text-align: center;
+}
+.all-topic-list li:hover{
+    background-color: #1976d27a; 
+}
+#input-field{
+    font-size: 1.15rem;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid rgba(255, 255, 255, 0.704);
+    height: 50px;
+    backdrop-filter: blur(5px);
+    margin: 10px 0;
+}
+#app-font-color{
+    color: teal;
+}
+.input-color{
+    opacity: 75%;
+}
+.all-quiz-table{
+    width: 50dvw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.849);
+    border: none;
+    outline: none;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin-left: 25vw;
+    margin-top: 15vh;
+    box-shadow: -5px 7px 9px 7px rgba(0, 18, 18, 0.553);
+    overflow: hidden;
+}
+
+.all-quiz-table tr{
+    width: auto;
+    border: none;
+    outline: none;
+    background-color: rgb(28, 27, 27);
+    color: white;
+}
+.all-quiz-table td{
+   border: none;
+   border-bottom: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+.all-quiz-table th{
+    color: rgb(236, 233, 233);
+    background-color: rgb(27, 45, 65);
+   text-align: center;
+}
+.all-quiz-table tr:hover{
+    background-color: rgb(46, 45, 45);
+    color: white;
+}
+#home-btn{
+    position: absolute;
+    top: 2dvh;
+    left: 2dvw;
+}
+.confirm-modal{
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    width: auto;
+    padding: 0 2vw;
+    height: 8vh;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(15, 103, 235, 0.798);
+    box-shadow: -2px 3px 8px 2px rgba(0, 0, 0, 0.463);
+   animation:drop-in  1.5s;
+}
+@keyframes drop-in {
+    from{
+        opacity: 20%;
+        top: 0;
+    }
+}
+.quiz-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.quizCard{
+    width: 90vw;
+    height: 70vh;
+    background-color: rgba(102, 200, 239, 0.876);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 8px 15px rgba(0, 0, 0, 0.299);
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px;
+    font-weight: bold;
+    margin-top: 5vh;
+    
+}
+.list-flex{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 10vw;
+    font-size: 1.25rem;
+    font-weight: lighter;
+}
