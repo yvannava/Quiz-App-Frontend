@@ -16,9 +16,6 @@ const Dashboard = (props)=>{
       <Link to={"/startQuiz"} style={{textDecoration:"none"}}>
    <DashCard title = "Start" description ="Select this option to select a Quiz you wish to start." icon = {<PlayCircle className="dash-list-icon"/>}/>
       </Link>
-      {/* <Link to={"/deleteQuestion"} style={{textDecoration:"none"}}>
-  <DashCard title ="Delete" description ="Select a Quiz you wish to delete" icon = {<RemoveCircle className="dash-list-icon"/>}/>
-      </Link> */}
       <Link to={"/allQuizzes"} style={{textDecoration:"none"}}>
    <DashCard title = "All Quizzes" description = "*Displays all the quizzes you have saved." icon = {<List className="dash-list-icon"/>}/>
       </Link>

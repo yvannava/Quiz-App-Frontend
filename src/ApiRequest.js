@@ -3,7 +3,6 @@ import axios from "axios";
     export const PostRequest = async (formdata,url)=>{
       try{
     const response = await axios.post(url,formdata,{
-      method: "Post",
       headers: {
         'Content-Type': 'application/json',
         // Add any other headers as needed
@@ -18,7 +17,7 @@ import axios from "axios";
 }
 
 export const GetRequest = (url,setData)=>{
-   
+
       const fetchdata = async ()=>{
         try {
           const response = await axios.get(url);
