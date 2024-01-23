@@ -39,7 +39,7 @@ const generateNewTableRow = (props) => (
 
   return (
     <>
-    <h3 align="center"  style={{color:"wheat",marginTop:"10vh"}}>List of all your quizzes currently</h3>
+    <h3 align="center"  style={{color:"wheat",marginTop:"10vh"}}>List of all your saved Quizzes</h3>
     <div className="table-container">
      <table className="all-quiz-table">
       <thead>

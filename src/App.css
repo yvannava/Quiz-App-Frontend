@@ -175,21 +175,13 @@
 }
 .quiz-container{
     width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-.quizCard{
-    width: 90vw;
     height: 70vh;
-    background-color: rgba(102, 200, 239, 0.876);
-    backdrop-filter: blur(5px);
-    box-shadow: 1px 1px 8px 15px rgba(0, 0, 0, 0.299);
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px;
-    font-weight: bold;
-    margin-top: 5vh;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    color: white;
 }
 .list-flex{
     display: flex;
@@ -198,4 +190,40 @@
     width: 10vw;
     font-size: 1.25rem;
     font-weight: lighter;
+}
+.question-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    min-height: 10vh;
+    font-size: 2rem;
+    background-color: #33312e;
+    outline:3px solid #662c91;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+
+}
+.option-card-container{
+    width: 50vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    text-align:center;
+    outline: 3px solid #33312e;
+    background-color: #662c91;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: none;
+}
+.option-card-container:hover{
+outline: 4px solid white;
+background-color: rgba(245, 245, 245, 0.911);
+color: #662c91;
+}
+.option-card-container:active{
+    background-color:#710dbe;
+    color: white;
+    outline: 2px solid white;
 }
