@@ -1,26 +1,17 @@
-import OptionCard from "../Components/OptionCard";
-import QuestionCard from "../Components/QuestionCard";
+import { Link } from "react-router-dom";
+import GetTopicCards from "../Components/GetTopicCards";
+import { Button } from "@mui/material";
 
 const StartQuiz = ()=>{
-const arr = ["Red","Blue","Green","Yellow"]
-    const startTheQuiz =()=>{
-         return(
-        <div className="quiz-container">
-        <h4>Question 1 of 20</h4>
-        <QuestionCard/>
-<OptionCard option ={arr[0]}/>
-<OptionCard option ={arr[1]}/>
-<OptionCard option ={arr[3]}/>
-<OptionCard option ={arr[2]}/>
-    </div>
-         )
-    }
 
-   
     return(
         <>
-        <h4>Select which quiz you would like to start.</h4>
-        {/* {startTheQuiz} */}
+        <h4 style={{color:"white"}}>Select which quiz you would like to start.</h4>
+        {/* <button className="btn" onClick={()=>{setStart(startTheQuiz)}}>Begin</button> */}
+        <GetTopicCards/>
+        <Link to={"/"}>
+  <Button variant="contained" color="error" id="home-btn">Back</Button>
+  </Link>
         </>
     )
 }

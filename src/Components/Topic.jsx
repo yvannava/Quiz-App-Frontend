@@ -8,6 +8,7 @@ const Topic = (props) => {
     const [isVisible, setIsVisible] = useState(true);
     const [topic, setTopic] = useState("");
     const [getDetails, setGetDetails] = useState([]);
+    const[error,setError] = useState();
     const [modal,showModal] = useState();
     // Sends a Post Request to add a new Topic.
     const handleSubmit = (e) => {
@@ -25,14 +26,16 @@ const Topic = (props) => {
     //Grabs all the topics from DB.
     useEffect(() => {
         const getApi = "http://localhost:8080/App/v1/Quiz/Topics";
-        GetRequest(getApi, setGetDetails);
+        GetRequest(getApi, setGetDetails,setError);
     }, [modal]);
 
     // generates a list of Topics.
     const topicList = () => {
         
         return (
+
                     <ul className="all-topic-list">
+                        <p style={{color:"red",fontSize:20,textAlign:"center"}}>{error}</p>
                         {getDetails.map((item) => {
                             return (
                                 <Link to={"/createQuestionForm"} style={{textDecoration:"none",color:"white"}}>
@@ -76,11 +79,7 @@ const Topic = (props) => {
             </>
         );
     };
-    //Generates Question form
-    const generateQuestionForm = ()=>{
-        
-    }
-   
+    
 
      // Displays the modal for 1.5 seconds
   useEffect(() => {

@@ -4,7 +4,6 @@ import Dashboard from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CreateQuestion from './pages/CreateQuestion'
 import StartQuiz from './pages/StartQuiz'
-import DeleteQuestion from './pages/DeleteQuestion'
 import AllQuestions from './pages/AllQuestions'
 import Topic from './Components/Topic'
 
@@ -20,7 +19,6 @@ function App() {
           <Route path='/createQuiz' element={<Topic/>}/>
           <Route path='/createQuestionForm' element={<CreateQuestion/>}/>
           <Route path='/startQuiz' element={<StartQuiz />} />
-          <Route path='/deleteQuestion' element={<DeleteQuestion />}/>
           <Route path='/allQuizzes' element={<AllQuestions />}/>
         </Routes>
       </BrowserRouter>

@@ -16,13 +16,14 @@ import axios from "axios";
       }
 }
 
-export const GetRequest = (url,setData)=>{
+export const GetRequest = (url,setData,setError)=>{
 
       const fetchdata = async ()=>{
         try {
           const response = await axios.get(url);
           setData(response.data);
         } catch (error) {
+          setError("server is unavailable, refresh the page and try again.")
           console.error('Error fetching data:', error);
         }};
         fetchdata();
